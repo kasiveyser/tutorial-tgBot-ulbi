@@ -1,0 +1,25 @@
+{
+  "name": "tutorial-tgbot-ulbi",
+  "version": "1.0.0",
+  "description": "2",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasiveyser/tutorial-tgBot-ulbi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasiveyser/tutorial-tgBot-ulbi/issues"
+  },
+  "homepage": "https://github.com/kasiveyser/tutorial-tgBot-ulbi#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.56.0",
+    "nodemon": "^2.0.15"
+  }
+}
