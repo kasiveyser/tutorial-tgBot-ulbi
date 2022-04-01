@@ -51,13 +51,18 @@ const start = () => {
   bot.on("callback_query", msg => {
     const data = msg.data;
     const chatId = msg.message.chat.id;
-    if(data === "/again"){
-      return startGame(chatId);
-    }
-    if(data == chats[chatId]) {
-      return bot.sendMessage(chatId, `Поздравляю, ты угадал цифру ${chats[chatId]}`, againOptions)
-    } else {
-      return bot.sendMessage(chatId, `Правильная цифра ${chats[chatId]}`, againOptions)
+
+    try {
+      if(data === "/again"){
+        return startGame(chatId);
+      }
+      if(data == chats[chatId]) {
+        return bot.sendMessage(chatId, `Поздравляю, ты угадал цифру ${chats[chatId]}`, againOptions)
+      } else {
+        return bot.sendMessage(chatId, `Правильная цифра ${chats[chatId]}`, againOptions)
+      }
+    } catch (e) {
+      return bot.sendMessage(chatId, "произошла некая ошибка")
     }
     // console.log(msg);
   })
